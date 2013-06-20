@@ -20,7 +20,7 @@ import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.widgets.Label;
 
 
-public class LecturerSchedule {
+public class RoomSchedule {
 	private static Table table;
 
 	/**
@@ -30,18 +30,18 @@ public class LecturerSchedule {
 	public static void main(String[] args) {
 		Display display = Display.getDefault();
 		Shell shlAustonTimetable = new Shell();
-		shlAustonTimetable.setImage(SWTResourceManager.getImage(LecturerSchedule.class, "/com/sun/java/swing/plaf/windows/icons/JavaCup32.png"));
+		shlAustonTimetable.setImage(SWTResourceManager.getImage(RoomSchedule.class, "/com/sun/java/swing/plaf/windows/icons/JavaCup32.png"));
 		shlAustonTimetable.setMaximized(true);
 		shlAustonTimetable.setMinimumSize(new Point(800, 600));
 		shlAustonTimetable.setSize(765, 451);
-		shlAustonTimetable.setText("Lecturer Schedule");
+		shlAustonTimetable.setText("Room Schedule");
 		shlAustonTimetable.setLayout(new FormLayout());
 		
 		ScrolledComposite scrolledComposite = new ScrolledComposite(shlAustonTimetable, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
 		scrolledComposite.setAlwaysShowScrollBars(true);
 		FormData fd_scrolledComposite = new FormData();
-		fd_scrolledComposite.left = new FormAttachment(0, 10);
 		fd_scrolledComposite.top = new FormAttachment(0, 10);
+		fd_scrolledComposite.left = new FormAttachment(0, 10);
 		fd_scrolledComposite.right = new FormAttachment(100, -10);
 		scrolledComposite.setLayoutData(fd_scrolledComposite);
 		scrolledComposite.setExpandHorizontal(true);
@@ -54,6 +54,7 @@ public class LecturerSchedule {
 		scrolledComposite.setMinSize(table.computeSize(SWT.DEFAULT, SWT.DEFAULT));
 		
 		Composite composite = new Composite(shlAustonTimetable, SWT.NONE);
+		fd_scrolledComposite.bottom = new FormAttachment(composite, -6);
 		FormData fd_composite = new FormData();
 		fd_composite.left = new FormAttachment(100, -774);
 		fd_composite.top = new FormAttachment(100, -35);
@@ -77,23 +78,6 @@ public class LecturerSchedule {
 		Button btnupdate = new Button(composite, SWT.NONE);
 		btnupdate.setBounds(527, 0, 75, 25);
 		btnupdate.setText("&Update");
-		
-		Composite composite_1 = new Composite(shlAustonTimetable, SWT.NONE);
-		fd_scrolledComposite.bottom = new FormAttachment(composite_1, -6);
-		FormData fd_composite_1 = new FormData();
-		fd_composite_1.left = new FormAttachment(0, 10);
-		fd_composite_1.right = new FormAttachment(100, -10);
-		fd_composite_1.top = new FormAttachment(composite, -31, SWT.TOP);
-		fd_composite_1.bottom = new FormAttachment(composite, -6);
-		composite_1.setLayoutData(fd_composite_1);
-		
-		Label lblTotalNumberOf = new Label(composite_1, SWT.NONE);
-		lblTotalNumberOf.setBounds(0, 10, 132, 15);
-		lblTotalNumberOf.setText("Total number of hours:");
-		
-		Label label = new Label(composite_1, SWT.NONE);
-		label.setBounds(138, 10, 45, 15);
-		label.setText("00");
 
 		shlAustonTimetable.open();
 		shlAustonTimetable.layout();
