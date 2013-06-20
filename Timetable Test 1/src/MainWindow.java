@@ -29,6 +29,7 @@ public class MainWindow {
 	public static void main(String[] args) {
 		Display display = Display.getDefault();
 		Shell shlAustonTimetable = new Shell();
+		shlAustonTimetable.setImage(SWTResourceManager.getImage(MainWindow.class, "/javax/swing/plaf/basic/icons/JavaCup16.png"));
 		shlAustonTimetable.setMaximized(true);
 		shlAustonTimetable.setMinimumSize(new Point(800, 600));
 		shlAustonTimetable.setSize(765, 451);
