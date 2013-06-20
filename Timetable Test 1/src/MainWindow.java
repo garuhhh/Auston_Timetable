@@ -86,11 +86,14 @@ public class MainWindow {
 		Menu menu_4 = new Menu(mntmview);
 		mntmview.setMenu(menu_4);
 		
-		MenuItem mntmLecturers = new MenuItem(menu_4, SWT.NONE);
-		mntmLecturers.setText("Lecturers");
+		MenuItem mntmLecturers_1 = new MenuItem(menu_4, SWT.CHECK);
+		mntmLecturers_1.setText("Lecturers");
 		
-		MenuItem mntmRooms = new MenuItem(menu_4, SWT.NONE);
-		mntmRooms.setText("Rooms");
+		MenuItem mntmrooms = new MenuItem(menu_4, SWT.CHECK);
+		mntmrooms.setText("&Rooms");
+		
+		MenuItem mntmRoomutilization = new MenuItem(menu_4, SWT.CHECK);
+		mntmRoomutilization.setText("Room &Utilization");
 		
 		MenuItem mntmedit = new MenuItem(menu, SWT.CASCADE);
 		mntmedit.setText("&Edit");
