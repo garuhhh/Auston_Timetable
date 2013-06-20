@@ -79,6 +79,18 @@ public class MainWindow {
 		mntmExit.setImage(SWTResourceManager.getImage(MainWindow.class, "/javax/swing/plaf/metal/icons/ocean/close.gif"));
 		mntmExit.setText("E&xit");
 		
+		MenuItem mntmview = new MenuItem(menu, SWT.CASCADE);
+		mntmview.setText("&View");
+		
+		Menu menu_4 = new Menu(mntmview);
+		mntmview.setMenu(menu_4);
+		
+		MenuItem mntmLecturers = new MenuItem(menu_4, SWT.NONE);
+		mntmLecturers.setText("Lecturers");
+		
+		MenuItem mntmRooms = new MenuItem(menu_4, SWT.NONE);
+		mntmRooms.setText("Rooms");
+		
 		MenuItem mntmedit = new MenuItem(menu, SWT.CASCADE);
 		mntmedit.setText("&Edit");
 		
@@ -100,40 +112,13 @@ public class MainWindow {
 		MenuItem mntmaboutAustontimetable = new MenuItem(menu_2, SWT.NONE);
 		mntmaboutAustontimetable.setText("&About AustonTimetable");
 		
-		Composite composite = new Composite(shlAustonTimetable, SWT.NONE);
-		FormData fd_composite = new FormData();
-		fd_composite.top = new FormAttachment(100, -45);
-		fd_composite.bottom = new FormAttachment(100, -10);
-		fd_composite.left = new FormAttachment(100, -774);
-		fd_composite.right = new FormAttachment(100, -10);
-		composite.setLayoutData(fd_composite);
-		
-		
-		Button btnOk = new Button(composite, SWT.NONE);
-		btnOk.setBounds(608, 10, 75, 25);
-		btnOk.addSelectionListener(new SelectionAdapter() {
-			@Override
-			public void widgetSelected(SelectionEvent e) {
-			}
-		});
-		btnOk.setText("&Ok");
-		
-		Button btnCancel = new Button(composite, SWT.CENTER);
-		btnCancel.setBounds(689, 10, 75, 25);
-		btnCancel.addSelectionListener(new SelectionAdapter() {
-			@Override
-			public void widgetSelected(SelectionEvent e) {
-			}
-		});
-		btnCancel.setText("Ca&ncel");
-		
 		ScrolledComposite scrolledComposite = new ScrolledComposite(shlAustonTimetable, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
 		scrolledComposite.setAlwaysShowScrollBars(true);
 		FormData fd_scrolledComposite = new FormData();
-		fd_scrolledComposite.bottom = new FormAttachment(composite, -6);
-		fd_scrolledComposite.right = new FormAttachment(composite, 0, SWT.RIGHT);
-		fd_scrolledComposite.left = new FormAttachment(0, 10);
+		fd_scrolledComposite.bottom = new FormAttachment(100, -10);
 		fd_scrolledComposite.top = new FormAttachment(0, 10);
+		fd_scrolledComposite.left = new FormAttachment(0, 10);
+		fd_scrolledComposite.right = new FormAttachment(100, -10);
 		scrolledComposite.setLayoutData(fd_scrolledComposite);
 		scrolledComposite.setExpandHorizontal(true);
 		scrolledComposite.setExpandVertical(true);
@@ -143,7 +128,6 @@ public class MainWindow {
 		table.setLinesVisible(true);
 		scrolledComposite.setContent(table);
 		scrolledComposite.setMinSize(table.computeSize(SWT.DEFAULT, SWT.DEFAULT));
-		btnOk.setFocus();
 
 		shlAustonTimetable.open();
 		shlAustonTimetable.layout();
