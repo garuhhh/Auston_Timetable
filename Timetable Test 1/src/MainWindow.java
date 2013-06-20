@@ -28,15 +28,15 @@ public class MainWindow {
 	 */
 	public static void main(String[] args) {
 		Display display = Display.getDefault();
-		Shell shell = new Shell();
-		shell.setMaximized(true);
-		shell.setMinimumSize(new Point(800, 600));
-		shell.setSize(765, 451);
-		shell.setText("SWT Application");
-		shell.setLayout(new FormLayout());
+		Shell shlAustonTimetable = new Shell();
+		shlAustonTimetable.setMaximized(true);
+		shlAustonTimetable.setMinimumSize(new Point(800, 600));
+		shlAustonTimetable.setSize(765, 451);
+		shlAustonTimetable.setText("Auston Timetable");
+		shlAustonTimetable.setLayout(new FormLayout());
 		
-		Menu menu = new Menu(shell, SWT.BAR);
-		shell.setMenuBar(menu);
+		Menu menu = new Menu(shlAustonTimetable, SWT.BAR);
+		shlAustonTimetable.setMenuBar(menu);
 		
 		MenuItem mntmFile = new MenuItem(menu, SWT.CASCADE);
 		mntmFile.setText("File");
@@ -79,6 +79,18 @@ public class MainWindow {
 		mntmExit.setImage(SWTResourceManager.getImage(MainWindow.class, "/javax/swing/plaf/metal/icons/ocean/close.gif"));
 		mntmExit.setText("E&xit");
 		
+		MenuItem mntmedit = new MenuItem(menu, SWT.CASCADE);
+		mntmedit.setText("&Edit");
+		
+		Menu menu_3 = new Menu(mntmedit);
+		mntmedit.setMenu(menu_3);
+		
+		MenuItem mntmUndo = new MenuItem(menu_3, SWT.NONE);
+		mntmUndo.setText("&Undo");
+		
+		MenuItem mntmRedo = new MenuItem(menu_3, SWT.NONE);
+		mntmRedo.setText("&Redo");
+		
 		MenuItem mntmhelp = new MenuItem(menu, SWT.CASCADE);
 		mntmhelp.setText("&Help");
 		
@@ -88,7 +100,7 @@ public class MainWindow {
 		MenuItem mntmaboutAustontimetable = new MenuItem(menu_2, SWT.NONE);
 		mntmaboutAustontimetable.setText("&About AustonTimetable");
 		
-		Composite composite = new Composite(shell, SWT.NONE);
+		Composite composite = new Composite(shlAustonTimetable, SWT.NONE);
 		FormData fd_composite = new FormData();
 		fd_composite.top = new FormAttachment(100, -45);
 		fd_composite.bottom = new FormAttachment(100, -10);
@@ -115,7 +127,7 @@ public class MainWindow {
 		});
 		btnCancel.setText("Ca&ncel");
 		
-		ScrolledComposite scrolledComposite = new ScrolledComposite(shell, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
+		ScrolledComposite scrolledComposite = new ScrolledComposite(shlAustonTimetable, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
 		scrolledComposite.setAlwaysShowScrollBars(true);
 		FormData fd_scrolledComposite = new FormData();
 		fd_scrolledComposite.bottom = new FormAttachment(composite, -6);
@@ -133,9 +145,9 @@ public class MainWindow {
 		scrolledComposite.setMinSize(table.computeSize(SWT.DEFAULT, SWT.DEFAULT));
 		btnOk.setFocus();
 
-		shell.open();
-		shell.layout();
-		while (!shell.isDisposed()) {
+		shlAustonTimetable.open();
+		shlAustonTimetable.layout();
+		while (!shlAustonTimetable.isDisposed()) {
 			if (!display.readAndDispatch()) {
 				display.sleep();
 			}
