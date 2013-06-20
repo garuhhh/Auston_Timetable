@@ -19,7 +19,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.custom.ScrolledComposite;
 
 
-public class Lecturers {
+public class Rooms {
 	private static Table table;
 
 	/**
@@ -29,11 +29,11 @@ public class Lecturers {
 	public static void main(String[] args) {
 		Display display = Display.getDefault();
 		Shell shlAustonTimetable = new Shell();
-		shlAustonTimetable.setImage(SWTResourceManager.getImage(Lecturers.class, "/com/sun/java/swing/plaf/windows/icons/JavaCup32.png"));
+		shlAustonTimetable.setImage(SWTResourceManager.getImage(Rooms.class, "/com/sun/java/swing/plaf/windows/icons/JavaCup32.png"));
 		shlAustonTimetable.setMaximized(true);
 		shlAustonTimetable.setMinimumSize(new Point(800, 600));
 		shlAustonTimetable.setSize(765, 451);
-		shlAustonTimetable.setText("Lecturers");
+		shlAustonTimetable.setText("Auston Rooms");
 		shlAustonTimetable.setLayout(new FormLayout());
 		
 		ScrolledComposite scrolledComposite = new ScrolledComposite(shlAustonTimetable, SWT.BORDER | SWT.H_SCROLL | SWT.V_SCROLL);
