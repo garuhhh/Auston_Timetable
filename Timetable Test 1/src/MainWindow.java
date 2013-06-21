@@ -86,14 +86,20 @@ public class MainWindow {
 		Menu menu_4 = new Menu(mntmview);
 		mntmview.setMenu(menu_4);
 		
-		MenuItem mntmLecturers_1 = new MenuItem(menu_4, SWT.CHECK);
+		MenuItem mntmLecturers_1 = new MenuItem(menu_4, SWT.CHECK);			//use Lecturers.java
 		mntmLecturers_1.setText("Lecturers");
 		
-		MenuItem mntmrooms = new MenuItem(menu_4, SWT.CHECK);
+		MenuItem mntmrooms = new MenuItem(menu_4, SWT.CHECK);				//use Rooms.java
 		mntmrooms.setText("&Rooms");
 		
-		MenuItem mntmRoomutilization = new MenuItem(menu_4, SWT.CHECK);
+		MenuItem mntmRoomutilization = new MenuItem(menu_4, SWT.CHECK);		//use RoomUtilization.java
 		mntmRoomutilization.setText("Room &Utilization");
+		
+		MenuItem mntmlistOfProgrammes = new MenuItem(menu_4, SWT.NONE);
+		mntmlistOfProgrammes.setText("&List of Programmes and Universities");
+		
+		MenuItem mntmscheduleByProgrammes = new MenuItem(menu_4, SWT.NONE);
+		mntmscheduleByProgrammes.setText("&Schedule by Programmes");
 		
 		MenuItem mntmedit = new MenuItem(menu, SWT.CASCADE);
 		mntmedit.setText("&Edit");
