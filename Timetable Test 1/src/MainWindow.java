@@ -107,6 +107,12 @@ public class MainWindow {
 		MenuItem mntmRedo = new MenuItem(menu_3, SWT.NONE);
 		mntmRedo.setText("&Redo");
 		
+		new MenuItem(menu_3, SWT.SEPARATOR);
+		
+		MenuItem mntmupdate = new MenuItem(menu_3, SWT.NONE);
+		mntmupdate.setImage(SWTResourceManager.getImage(MainWindow.class, "/com/sun/java/swing/plaf/windows/icons/HardDrive.gif"));
+		mntmupdate.setText("&Update");
+		
 		MenuItem mntmhelp = new MenuItem(menu, SWT.CASCADE);
 		mntmhelp.setText("&Help");
 		
