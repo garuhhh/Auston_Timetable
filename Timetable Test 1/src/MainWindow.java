@@ -95,10 +95,10 @@ public class MainWindow {
 		MenuItem mntmRoomutilization = new MenuItem(menu_4, SWT.CHECK);		//use RoomUtilization.java
 		mntmRoomutilization.setText("Room &Utilization");
 		
-		MenuItem mntmlistOfProgrammes = new MenuItem(menu_4, SWT.NONE);
+		MenuItem mntmlistOfProgrammes = new MenuItem(menu_4, SWT.NONE);		//use ListofProgrammes.java
 		mntmlistOfProgrammes.setText("&List of Programmes and Universities");
 		
-		MenuItem mntmscheduleByProgrammes = new MenuItem(menu_4, SWT.NONE);
+		MenuItem mntmscheduleByProgrammes = new MenuItem(menu_4, SWT.NONE);	//use Programmes.java
 		mntmscheduleByProgrammes.setText("&Schedule by Programmes");
 		
 		MenuItem mntmedit = new MenuItem(menu, SWT.CASCADE);
