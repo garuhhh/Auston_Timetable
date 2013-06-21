@@ -73,10 +73,6 @@ public class Programmes {
 		});
 		btnok.setBounds(608, 0, 75, 25);
 		btnok.setText("&Close");
-		
-		Button btnupdate = new Button(composite, SWT.NONE);
-		btnupdate.setBounds(527, 0, 75, 25);
-		btnupdate.setText("&Update");
 
 		shlAustonTimetable.open();
 		shlAustonTimetable.layout();

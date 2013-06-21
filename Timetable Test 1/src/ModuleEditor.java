@@ -44,7 +44,7 @@ public class ModuleEditor extends Dialog {
 	 */
 	private void createContents() {
 		shell = new Shell(getParent(), getStyle());
-		shell.setSize(604, 300);
+		shell.setSize(577, 300);
 		shell.setText(getText());
 		
 		Label lblModuleNamePlaceholder = new Label(shell, SWT.NONE);
@@ -60,35 +60,23 @@ public class ModuleEditor extends Dialog {
 		lblPleaseSelectThe.setText("Please select the Programmes (and the corresponding University) to which this Module is offered:");
 		
 		Combo combo = new Combo(shell, SWT.NONE);
-		combo.setBounds(10, 94, 272, 23);
-		
-		Combo combo_1 = new Combo(shell, SWT.NONE);
-		combo_1.setBounds(288, 94, 300, 23);
+		combo.setBounds(10, 94, 551, 23);
 		
 		Combo combo_2 = new Combo(shell, SWT.NONE);
-		combo_2.setBounds(10, 123, 272, 23);
-		
-		Combo combo_3 = new Combo(shell, SWT.NONE);
-		combo_3.setBounds(288, 123, 300, 23);
+		combo_2.setBounds(10, 123, 551, 23);
 		
 		Combo combo_4 = new Combo(shell, SWT.NONE);
-		combo_4.setBounds(10, 152, 272, 23);
-		
-		Combo combo_5 = new Combo(shell, SWT.NONE);
-		combo_5.setBounds(288, 152, 300, 23);
+		combo_4.setBounds(10, 152, 551, 23);
 		
 		Combo combo_6 = new Combo(shell, SWT.NONE);
-		combo_6.setBounds(10, 181, 272, 23);
-		
-		Combo combo_7 = new Combo(shell, SWT.NONE);
-		combo_7.setBounds(288, 181, 300, 23);
+		combo_6.setBounds(10, 181, 551, 23);
 		
 		Button btncancel = new Button(shell, SWT.NONE);
-		btncancel.setBounds(513, 237, 75, 25);
+		btncancel.setBounds(486, 237, 75, 25);
 		btncancel.setText("&Cancel");
 		
 		Button btnsave = new Button(shell, SWT.NONE);
-		btnsave.setBounds(432, 237, 75, 25);
+		btnsave.setBounds(405, 237, 75, 25);
 		btnsave.setText("&Save");
 
 	}
