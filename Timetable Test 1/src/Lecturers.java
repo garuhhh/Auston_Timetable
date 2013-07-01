@@ -21,7 +21,7 @@ import org.eclipse.swt.custom.ScrolledComposite;
 
 public class Lecturers {
 	private static Table table;
-
+//
 	/**
 	 * Launch the application.
 	 * @param args
